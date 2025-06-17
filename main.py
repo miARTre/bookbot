@@ -1,3 +1,5 @@
+from stats import get_num_words
+
 # print("hello world")
 
 # def main():
@@ -12,7 +14,7 @@ def main():
     text = get_book_text(book_path)
     print(text)
 
-    count_words = get_count_words(text)
+    count_words = get_num_words(text)
     # print(count_words)
     print(f"{count_words} words found in the document")
 
@@ -25,11 +27,6 @@ def main():
 
     print_report(char_list, count_words, book_path)
    
-
-def get_count_words(text):
-    words = text.split()
-    return len(words)
-
 def convert_dict_to_list(char_dict):
     char_list = []
     for char, count in char_dict.items():
